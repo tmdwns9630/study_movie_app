@@ -44,26 +44,30 @@ class App extends React.Component {
   증가함수 = () => {
     console.log("렌더 증가함수 호출됨");
 
-    ////방법1
+    // //방법1
     // let 현재값 = this.state.count; //state의 지금 값을 가져와서
     // 현재값++; //+1하고
     // this.setState({ count: 현재값 }); // 그대로 setState에서 count 객체값으로 넣는다..
 
-    // 그걸 한 줄로 요약한게 아래다.
+    // //그걸 한 줄로 요약한게 아래다.
     // this.setState({ count: this.state.count + 1 });
-    ////--------------------------------------------------
-    //   count++;
-    //   console.log(count);
+    // //--------------------------------------------------
+    // count++;
+    // console.log(count);
 
-    //방법2
+    //방법2 : 객체가 복잡할 때 쓰기 유리하다.
     this.setState(function (현재state) {
       console.log("--------" + JSON.stringify(현재state));
+      return { count: 현재state.count + 1 };
     });
   };
 
   감소함수 = () => {
     console.log("렌더 감소함수 호출됨");
-    this.setState({ count: this.state.count-- });
+    // this.setState({ count: this.state.count-- });
+    this.setState(function (현재state) {
+      return { count: 현재state.count - 1 };
+    });
   };
   render() {
     console.log("ㅁㅇㅁ렌더함수 호출됨!ㅇㅁㅇ");
