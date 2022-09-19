@@ -1,55 +1,58 @@
-.movie_data {
+.movie__data {
   background-color: white;
   margin: 30px;
   padding: 30px;
   color: gray;
   position: relative;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
-.movie_title {
+.movie__title {
   color: black;
   font-size: xx-large;
+  border-bottom: 1px solid gray;
 }
 
-.movie_id {
-  color: red;
+.movie__id {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 2;
+}
 
+.movie__date {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.movie__info {
+  color: white;
   border: 1px solid #dae0ed;
   background-color: #dae0ed;
   font-weight: bold;
-  border-radius: 10%;
-  padding: 5px;
-
-  box-shadow: 10px 0px 17px 23px #000000;
+  border-radius: 50px;
+  padding: 5px 10px;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
-.movie_info {
-  border: 1px solid #dae0ed;
-  background-color: #dae0ed;
+.movie__adult {
+  color: white;
+  background-color: red;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 10px;
+  z-index: 9999;
+  border-radius: 50%;
   font-weight: bold;
-  border-radius: 10%;
-  padding: 5px;
-
-  box-shadow: 10px 0px 17px 23px #000000;
 }
 
-.movie_adult{
-    z-index: 78945613;
-    
+.movie__poster {
+  display: inline-block;
+  position: relative;
 }
 
-.movie_poster{
-    display:inline-block;
-    position: relative;
-    glgnglgnal gl glgnal glgnal
-    glgnglgnal gl glglan ekdltmzl
-     glgnglgnal gl glgnal glgnal dkwlxksl glgnal ekdl tmzltmzl
-     glgnglgnal gl glgnal glgnal glgn glgnal gl glgnal ekdltmzl
-     glgnglgnal gl glgnal glgnal dkwlxksl gngnal ekdl tmzltmzl
-     glgnglgnal gl glgnal glgnalgl glgn glgnal gl glgnal glgnal
-     glgnglgnal gl glgnal glgnal dkwlxksl glgnal ekdl tmzltmzl
-     ahf>fn lgangladpg;
+.movie__lang {
+  text-transform: uppercase;
 }
