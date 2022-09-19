@@ -1,85 +1,67 @@
-import React from "react";
-// import Movies from "./components/Movies";
+import axios from "axios";
+import React, { Fragment, useEffect, useState } from "react";
+import "./App.css";
+//import ClickCounter from "./components/ClickCounter";
+//로딩 화면의 원리를 간단하게 알아보자.
+function App(props) {
+  //const [loading, setloading] = useState(true);
+  const [movies, setMovies] = useState([]);
 
-//함수 컴포넌트
-// function App() {
-//   return <div></div>;
-// }
-
-// ↑↓ 위 아래는 의외로 같다.
-//App(){} === render(){]로 볼 수 있다.
-
-// //클래스 컴포넌트 방식
-// class App extends React.Component {
-//     render() {
-//         return <div>클래스 컴포넌트</div>
-//     }
-// }
-
-class App extends React.Component {
-  //   state = {
-  //     count: -1,
-  //   }; //일단 객체로 보자
-
-  //   증가함수 = () => {
-  //     console.log("멤버 증가함수 호출됨");
-  //     this.state.count = -12;
-  //     console.log(this.state);
-  //   };
-
-  //   감소함수 = () => {
-  //     console.log("멤버 감소함수 호출됨");
-  //     this.state.count--;
-  //     console.log(this.state);
-  //   };
-
-  constructor(props) {
-    super(props); //부모 생성자 호출,
-    //console.log("super");
-    this.state = {
-      count: 555,
-    };
-  }
-
-  증가함수 = () => {
-    console.log("렌더 증가함수 호출됨");
-
-    // //방법1
-    // let 현재값 = this.state.count; //state의 지금 값을 가져와서
-    // 현재값++; //+1하고
-    // this.setState({ count: 현재값 }); // 그대로 setState에서 count 객체값으로 넣는다..
-
-    // //그걸 한 줄로 요약한게 아래다.
-    // this.setState({ count: this.state.count + 1 });
-    // //--------------------------------------------------
-    // count++;
-    // console.log(count);
-
-    //방법2 : 객체가 복잡할 때 쓰기 유리하다.
-    this.setState(function (현재state) {
-      console.log("--------" + JSON.stringify(현재state));
-      return { count: 현재state.count + 1 };
-    });
-  };
-
-  감소함수 = () => {
-    console.log("렌더 감소함수 호출됨");
-    // this.setState({ count: this.state.count-- });
-    this.setState(function (현재state) {
-      return { count: 현재state.count - 1 };
-    });
-  };
-  render() {
-    console.log("ㅁㅇㅁ렌더함수 호출됨!ㅇㅁㅇ");
-    //console.log(this.state);
-    return (
-      <div>
-        {/* <h1>카운터 : {count}</h1> */}
-        <h1>카운터 : {this.state.count}</h1>
-        <button onClick={this.증가함수}>+1</button>
-        <button onClick={this.감소함수}>-1</button>
-      </div>
+  async function getMovieAPI() {
+    if (movies.length > 0) return;
+    //ㄴ 값이 있으면 한번만 실행하고 더 안 하겠다.
+    const result = await axios.get(
+      "https://api.themoviedb.org/3/movie/popular?api_key=3d6a0c3b9d0f8c74a2c6096b10bd3347&language=ko&page=10np"
     );
+
+    console.log(result.data.results);
+    console.log(result.data.results[0].title);
+    console.log(`무비스 before : ${movies}`);
+
+    setMovies(function (mv) {
+      return result.data.results;
+    });
+    console.log(`무비스 after : ${movies}`);
+    console.log(`무비스0 타이틀 : ${movies[0].title}`);
+    //>Promise
+    //ㄴ 호출했을 때 시간이 걸리는 경우.
   }
+
+  //뭔가를 기다려야할 경우
+  //함수 : async, 함수가 기다려 줄 수 있는 함수라고 명시해야 한다.
+  //await : 기다려야할 대상이 있는 라인을 명시.
+  //result.data에 postman에서 봤던 데이터가 객체화되어서 들어와있다.
+  getMovieAPI();
+  return (
+    <Fragment>
+      <p>
+        {/* https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg */}
+        <div>hello world</div>
+        <div>제목 : {movies[0].title} </div>
+        <div>줄거리 : {movies[0].overview} </div>
+        <div>평점 : {movies[0].vote_average}</div>
+        <div>성인영화 : {movies[0].vote_average}</div>
+        <div>언어 : {movies[0].original_language}</div>
+        <div>개봉일 : {movies[0].release_date}</div>
+        <img
+          src={`https://image.tmdb.org/t/p/original/${movies[0].poster_path}`}
+          alt="loading"
+        ></img>
+      </p>
+      <p>
+        <div>hello world</div>
+        <div>제목 : {movies[1].title} </div>
+        <div>줄거리 : {movies[1].overview} </div>
+        <div>평점 : {movies[1].vote_average}</div>
+        <div>성인영화 : {movies[1].vote_average}</div>
+        <div>언어 : {movies[1].original_language}</div>
+        <div>개봉일 : {movies[1].release_date}</div>
+        <img
+          src={`https://image.tmdb.org/t/p/original/${movies[0].poster_path}`}
+          alt="loading"
+        ></img>
+      </p>
+    </Fragment>
+  );
 }
 export default App;
