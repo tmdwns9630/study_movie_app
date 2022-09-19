@@ -14,12 +14,12 @@ function App(props) {
       "https://api.themoviedb.org/3/movie/popular?api_key=3d6a0c3b9d0f8c74a2c6096b10bd3347&language=ko&page=10np"
     );
 
-    console.log(result.data.results);
-    console.log(result.data.results[0].title);
-    console.log(`무비스 before : ${movies}`);
+    // console.log(result.data.results);
+    // console.log(result.data.results[0].title);
+    // console.log(`무비스 before : ${movies}`);
     setMovies(result.data.results);
-    console.log(`무비스 after : ${movies}`);
-    console.log(`무비스0 타이틀 : ${movies[0].title}`);
+    // console.log(`무비스 after : ${movies}`);
+    // console.log(`무비스0 타이틀 : ${movies[0].title}`);
   }
 
   //뭔가를 기다려야할 경우
@@ -30,37 +30,13 @@ function App(props) {
 
   return (
     <>
-      {0 < movies.length ? (
-        <Fragment>
-          <p>
-            {/* https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg */}
-            <div>hello world</div>
-            <div>제목 : {movies[0].title} </div>
-            <div>줄거리 : {movies[0].overview} </div>
-            <div>평점 : {movies[0].vote_average}</div>
-            <div>성인영화 : {movies[0].vote_average}</div>
-            <div>언어 : {movies[0].original_language}</div>
-            <div>개봉일 : {movies[0].release_date}</div>
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movies[0].poster_path}`}
-              alt="loading"
-            ></img>
-          </p>
-          <p>
-            <div>hello world</div>
-            <div>제목 : {movies[1].title} </div>
-            <div>줄거리 : {movies[1].overview} </div>
-            <div>평점 : {movies[1].vote_average}</div>
-            <div>성인영화 : {movies[1].vote_average}</div>
-            <div>언어 : {movies[1].original_language}</div>
-            <div>개봉일 : {movies[1].release_date}</div>
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movies[0].poster_path}`}
-              alt="loading"
-            ></img>
-          </p>
-        </Fragment>
-      ) : null}
+      {loading ? (
+        <div>로딩중..</div>
+      ) : (
+        movies.map(function (ele) {
+          return <Movie key={ele.id} />;
+        })
+      )}
     </>
   );
 }
