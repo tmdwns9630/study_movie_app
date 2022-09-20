@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Movies from "./Movies";
 import "./Menu.css";
+import Youtube from "./Youtube";
+
 //latest가 왠지 안된다.
 function Home() {
   console.log("Home");
@@ -50,6 +52,9 @@ function Menu(props) {
           <li>
             <Link to="/about">About us...</Link>
           </li>
+          <li>
+            <Link to="/Youtube">유튜브</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -58,6 +63,7 @@ function Menu(props) {
         <Route path="/popular" element={<Movies apiPath="popular" />} />
         <Route path="/upcoming" element={<Movies apiPath="upcoming" />} />
         <Route path="/latest" element={<Movies apiPath="latest" />} />
+        <Route path="/Youtube" element={<Youtube />} />
       </Routes>
       {/* path의 경로로 들어가면 element의 컴포넌트를 렌더링 하라. */}
     </BrowserRouter>
