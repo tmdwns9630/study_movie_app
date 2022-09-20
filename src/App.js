@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
+import Movie from "./components/Movie";
 import "./App.css";
 //import ClickCounter from "./components/ClickCounter";
 //로딩 화면의 원리를 간단하게 알아보자.
@@ -16,11 +17,11 @@ function App(props) {
 
     // console.log(result.data.results);
     // console.log(result.data.results[0].title);
-    // console.log(`무비스 before : ${movies}`);
+    // console.log(`무비스 before : ${movies}`);s
     setMovies(result.data.results);
     // console.log(`무비스 after : ${movies}`);
     // console.log(`무비스0 타이틀 : ${movies[0].title}`);
-    setLoading(false);
+    setloading(false);
   }
 
   //뭔가를 기다려야할 경우
