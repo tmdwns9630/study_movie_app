@@ -1,3 +1,29 @@
 .yt__main {
-  background-color: yellow;
+  color: white;
+}
+
+.yt__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.yt__clock {
+  color: aliceblue;
+  margin-left: 20px;
+}
+
+.yt__icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 120px;
+}
+
+.yt__icon > span {
+  margin-left: 1px;
+}
+
+svg {
+  width: 17px;
 }
