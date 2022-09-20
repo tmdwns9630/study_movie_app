@@ -39,7 +39,7 @@ Movie.propTypes = {
   vote_average: PropTypes.number.isRequired,
   adult: PropTypes.bool.isRequired,
   original_language: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.string,
 };
 
 export default Movie;
