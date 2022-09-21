@@ -1,6 +1,6 @@
 function Kakaotalk() {
-  //  width 어케 맞추냐 싯팔
-  // 글자 굵기 싯팔롬아
+  //  width 어케 맞추냐
+  // 글자 굵기 롬아
   return (
     <>
       <h1 className="text-3xl font-bold underline">Hello Tailwind!</h1>

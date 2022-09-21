@@ -67,6 +67,19 @@ function ClickCounter(props) {
         <button onClick={stopTimer}>STOP</button>
       </div>
       <hr />
+      <div>
+        <div>현재 문제</div>
+        <div>
+          1. if문으로 60초 넘기면 1분으로 바꾸는 로직이 동작 안함
+          <br />
+          ㄴ이건 나중에 처리하기로 함.
+          <br />
+          2. stop 버튼의 로그는 출력 되는데 정작 setInterval은 정지 안됨
+          <br />
+          ㄴ몰?루.
+          <br />
+        </div>
+      </div>
     </Fragment>
   );
 }

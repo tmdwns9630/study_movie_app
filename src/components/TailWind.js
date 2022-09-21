@@ -32,6 +32,12 @@ function TailWind() {
         <div>align는 items으로 축약</div>
         <div>4</div>
       </div>
+      <div
+        className="text-3xl font-bold italic text-center
+        mb-3 flex justify-center"
+      >
+        글자 크기, 굵기, 기울임, 텍스트정렬, mb=margin bottom
+      </div>
     </>
   );
 }

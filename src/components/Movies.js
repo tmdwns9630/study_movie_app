@@ -20,11 +20,12 @@ function Movies(props) {
     if (!props.apiPath) return;
     console.log(`리턴과 현재 페이지 : ${props.apiPath}`);
     const result = await axios.get(
-      `https://api.themoviedb.org/3/movie/${props.apiPath}?api_key=3d6a0c3b9d0f8c74a2c6096b10bd3347&language=ko&page=10np`
+      `https://api.themoviedb.org/3/movie/${props.apiPath}?api_key=3d6a0c3b9d0f8c74a2c6096b10bd3347&language=ko&region=KRhttps://api.themoviedb.org/3/movie/${props.apiPath}?api_key=3d6a0c3b9d0f8c74a2c6096b10bd3347&language=ko&region=KR`
     );
     console.log(`현재 페이지 : ${props.apiPath}`);
     setMovies(result.data.results);
     setloading(false);
+    console.log(result.data.results[0]);
   }
   //뭔가를 기다려야할 경우
   //함수 : async, 함수가 기다려 줄 수 있는 함수라고 명시해야 한다.
