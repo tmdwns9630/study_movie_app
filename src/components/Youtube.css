@@ -1,6 +1,7 @@
 .yt__main {
   color: white;
   background-color: #2f3034;
+  width: 500px;
 }
 
 .yt__top {
@@ -27,4 +28,132 @@
 
 svg {
   width: 17px;
+}
+
+.yt__top2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yt__top2_left {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yt__top2_right {
+  display: flex;
+  justify-content: space-between;
+  /* border: 3px solid red; */
+  width: 200px;
+}
+
+.yt__top2_right_type > svg {
+  width: 25px;
+}
+.yt__top2_right_type_User {
+  background-color: skyblue;
+  border-radius: 50%;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yt__top3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.yt__top3_left {
+  /* border: 1px solid rgb(238, 0, 255); */
+  margin: 0px 20px;
+  width: 100px;
+  height: 30px;
+
+  background-color: #575758;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yt__top3_Line {
+  background-color: #575758;
+  width: 3px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.yt__top3_right {
+  display: flex;
+  justify-content: space-between;
+  /* border: 3px solid red; */
+  width: 300px;
+}
+
+.yt__top3_right_type {
+  border-radius: 25%;
+  background-color: #575758;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+.yt__top3_right_type:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.yt__video {
+  /* border: 3px solid red; */
+  width: 100%;
+}
+.yt__video_Thumbnail {
+  /* border: 3px solid red; */
+}
+.yt__video_Thumbnail > img {
+  width: 100%;
+}
+
+.yt__video_Thumbnail_runTime {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 6%;
+  text-align: center;
+  /* border: 3px solid red; */
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+}
+
+.yt__video_bar {
+  width: 100%;
+  display: flex;
+}
+
+.yt_video_info_uploaderProfile > img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.yt_video_info_text {
+  margin-left: 10px;
+  width: 100%;
+}
+.yt_video_info_uploaderInfo {
+  /* display: flex;
+  justify-content: space-between; */
+  width: 100%;
+}
+.yt_video_info_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.yt_video_info_title > svg {
+  width: 30px;
+}
+.yt_video_info_uploaderInfo > * {
+  margin-right: 5px;
+  color: #aeaeae;
 }
