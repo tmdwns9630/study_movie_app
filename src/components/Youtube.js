@@ -178,7 +178,7 @@ function Youtube(props) {
           <div className="yt_video_info_text">
             <div className="yt_video_info_title">
               <div className="yt_video_info_title_text">
-                AVGN도 분노한 전설의 똥게임 [이름없는 마을
+                AVGN도 분노한 전설의 똥게임 [이름없는 마을]
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
