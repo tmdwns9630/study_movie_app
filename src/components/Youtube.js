@@ -173,7 +173,7 @@ function Youtube(props) {
         </div>
         <div className="yt__video_bar">
           <div className="yt_video_info_uploaderProfile">
-            <img src="https://yt3.ggpht.com/ytc/AMLnZu9T1gKkJqvCFWdDPAPiwZe2urmNwg85Zma-9HMZDw=s900-c-k-c0x00ffffff-no-rj"></img>
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/kimdoe-profile_image-354ecea9a42c41e9-300x300.png"></img>
           </div>
           <div className="yt_video_info_text">
             <div className="yt_video_info_title">

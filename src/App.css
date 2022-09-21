@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .title {
   color: darkgoldenrod;
   font-size: 30px;

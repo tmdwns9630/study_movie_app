@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Movies from "./Movies";
 import "./Menu.css";
 import Youtube from "./Youtube";
+import TailWind from "./TailWind";
 
 //latest가 왠지 안된다.
 function Home() {
@@ -11,7 +12,11 @@ function Home() {
 //함수가 JSx를 리턴하면 그게 컴포넌트
 function About() {
   console.log("about");
-  return <h2>개발자 소개</h2>;
+  return (
+    <>
+      <h2>개발자 소개</h2>
+    </>
+  );
 }
 
 function Menu(props) {
@@ -55,6 +60,9 @@ function Menu(props) {
           <li>
             <Link to="/Youtube">유튜브</Link>
           </li>
+          <li>
+            <Link to="/tailwind">TailWind 연습</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -64,8 +72,12 @@ function Menu(props) {
         <Route path="/upcoming" element={<Movies apiPath="upcoming" />} />
         <Route path="/latest" element={<Movies apiPath="latest" />} />
         <Route path="/Youtube" element={<Youtube />} />
+        <Route path="/tailwind" element={<TailWind />} />
       </Routes>
-      {/* path의 경로로 들어가면 element의 컴포넌트를 렌더링 하라. */}
+      {/* path의 경로로 들어가면 element의 컴포넌트를 렌더링 하라.
+      룰1 : path 경로는 무조건 소문자로 하자.
+      룰2. js 파일은 첫글자는 무조건 대문자, 나머지 대문자.
+      룰3. 코드 자동 완성을 맹신하지 말자, 그거도 미스가 나올 수 있다.*/}
     </BrowserRouter>
   );
 }
