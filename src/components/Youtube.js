@@ -40,7 +40,18 @@ function Youtube(props) {
           </span>
         </div>
       </div>
-      <div className="yt__top2"></div>
+      <div className="yt__top2">
+        <div className="yt__top2_left">
+          <span>탐색</span>
+        </div>
+        <div className="yt__top2_right">
+          <span>전체</span>
+          <span>게임</span>
+          <span>믹스</span>
+          <span>음악</span>
+          <span>아니메</span>
+        </div>
+      </div>
     </div>
   );
 }
