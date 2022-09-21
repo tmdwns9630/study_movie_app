@@ -122,17 +122,17 @@ function Youtube(props) {
       {/* 4 : 동영상1----------------------- */}
       <div className="yt__video">
         <div className="yt__video_Thumbnail">
-          <img src="https://i.ytimg.com/vi/2Gb9RpZrFDY/maxresdefault.jpg"></img>
-          <div className="yt__video_Thumbnail_runTime">10:21</div>
+          <img src="https://i.ytimg.com/vi/2fQSxrrwxjI/maxresdefault.jpg"></img>
+          <div className="yt__video_Thumbnail_runTime">20:48</div>
         </div>
         <div className="yt__video_bar">
           <div className="yt_video_info_uploaderProfile">
-            <img src="https://yt3.ggpht.com/ytc/AMLnZu9vwV4Dgc3o-qdpVCPP2iy0ok-APj4DJyyPMWQtvw=s900-c-k-c0x00ffffff-no-rj"></img>
+            <img src="https://yt3.ggpht.com/ytc/AMLnZu-sldeILdF5Q9-c2HDT-szRFil6s07KLz6JWy_NPg=s900-c-k-c0x00ffffff-no-rj"></img>
           </div>
           <div className="yt_video_info_text">
             <div className="yt_video_info_title">
               <div className="yt_video_info_title_text">
-                커비야... 너 왜 눈을 그렇게 떠...? [커비 스페샬]
+                스파이더맨 노웨이홈 명장면&명대사 총정리
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -152,14 +152,14 @@ function Youtube(props) {
 
             <div className="yt_video_info_uploaderInfo">
               <span className="yt_video_info_uploaderInfo_uploaderName">
-                김도랜드
+                B Man 삐맨
               </span>
               <span>·</span>
               <span className="yt_video_info_uploaderInfo_count">
-                조회수 11만회
+                조회수 204만회
               </span>
               <span>·</span>
-              <span className="yt_video_info_uploaderInfo_time">2년 전</span>
+              <span className="yt_video_info_uploaderInfo_time">6개월 전</span>
             </div>
           </div>
         </div>
@@ -168,8 +168,8 @@ function Youtube(props) {
       {/* 4 : 동영상2----------------------- */}
       <div className="yt__video">
         <div className="yt__video_Thumbnail">
-          <img src="https://i.ytimg.com/vi/dRN7HLN1lfQ/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAlAQupieZouLgeNqtYln3tVojcBQ"></img>
-          <div className="yt__video_Thumbnail_runTime">10:21</div>
+          <img src="https://i.ytimg.com/vi/c9EjteT8_VA/maxresdefault.jpg"></img>
+          <div className="yt__video_Thumbnail_runTime">1:10:21</div>
         </div>
         <div className="yt__video_bar">
           <div className="yt_video_info_uploaderProfile">
@@ -178,7 +178,8 @@ function Youtube(props) {
           <div className="yt_video_info_text">
             <div className="yt_video_info_title">
               <div className="yt_video_info_title_text">
-                AVGN도 분노한 전설의 똥게임 [이름없는 마을]
+                [리로더] 장전이 리얼하게 어려운 횡스크롤 슈팅게임! (22-09-18) |
+                김도 풀영상
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -202,10 +203,10 @@ function Youtube(props) {
               </span>
               <span>·</span>
               <span className="yt_video_info_uploaderInfo_count">
-                조회수 18만회
+                조회수 5.1천회
               </span>
               <span>·</span>
-              <span className="yt_video_info_uploaderInfo_time">2년 전</span>
+              <span className="yt_video_info_uploaderInfo_time">19시간 전</span>
             </div>
           </div>
         </div>

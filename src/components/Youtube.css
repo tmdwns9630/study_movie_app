@@ -34,6 +34,7 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .yt__top2_left {
@@ -65,6 +66,7 @@ svg {
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-top: 15px;
 }
 
 .yt__top3_left {
@@ -107,6 +109,7 @@ svg {
 .yt__video {
   /* border: 3px solid red; */
   width: 100%;
+  margin-top: 15px;
 }
 .yt__video_Thumbnail {
   /* border: 3px solid red; */
@@ -125,6 +128,7 @@ svg {
   bottom: 10px;
   right: 10px;
 }
+/*position: absolute;가 동작하려면 부모 태그에 포지션:relative 가 있어야 한다.  */
 
 .yt__video_bar {
   width: 100%;
