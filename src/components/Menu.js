@@ -3,6 +3,7 @@ import Movies from "./Movies";
 import "./Menu.css";
 import Youtube from "./Youtube";
 import TailWind from "./TailWind";
+import Kakaotalk from "./Kakaotalk";
 
 //latest가 왠지 안된다.
 function Home() {
@@ -63,6 +64,9 @@ function Menu(props) {
           <li>
             <Link to="/tailwind">TailWind 연습</Link>
           </li>
+          <li>
+            <Link to="/Kakaotalk">카카오톡</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
@@ -73,6 +77,7 @@ function Menu(props) {
         <Route path="/latest" element={<Movies apiPath="latest" />} />
         <Route path="/Youtube" element={<Youtube />} />
         <Route path="/tailwind" element={<TailWind />} />
+        <Route path="/kakaotalk" element={<Kakaotalk />} />
       </Routes>
       {/* path의 경로로 들어가면 element의 컴포넌트를 렌더링 하라.
       룰1 : path 경로는 무조건 소문자로 하자.
