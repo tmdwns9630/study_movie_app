@@ -34,9 +34,9 @@ function TailWind() {
       </div>
       <div
         className="text-3xl font-bold italic text-center
-        mb-3 flex justify-center"
+        mb-3 flex justify-center  bg-gray-200 dark:bg-gray-600"
       >
-        글자 크기, 굵기, 기울임, 텍스트정렬, mb=margin bottom
+        글자 크기, 굵기, 기울임, 텍스트정렬, mb=margin bottom, e다크모드
       </div>
     </>
   );

@@ -4,16 +4,21 @@ function Kakaotalk() {
   // 글자 굵기 롬아
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello Tailwind!</h1>
-      <h1>카카오톡 카피</h1>
-      <div id="kt__main" className="bg-white w-10/12">
+      <h1 className="text-3xl font-bold underline">
+        Tailwind CSS로 카카오톡 만들기
+      </h1>
+
+      <div
+        id="kt__main"
+        className="bg-white text-black dark:bg-gray-800 dark:text-white w-10/12"
+      >
         <div id="kt__top1" className="flex justify-between">
-          <span className="text-lg text-black">더보기</span>
-          <div className="flex justify-between ">
-            <span className="mr-3">🔍</span>
-            <span className="mr-3">🎮</span>
-            <span className="mr-3">🎵</span>
-            <span className="mr-3">🛠</span>
+          <span className="text-2xl font-bold text-black ml-5">더보기</span>
+          <div className="flex justify-between text-2xl font-bold ">
+            <span className="mr-5">🔍</span>
+            <span className="mr-5">🚃</span>
+            <span className="mr-5">🎵</span>
+            <span className="mr-5">🛠</span>
           </div>
         </div>
         {/*-------kt__top1--------*/}
@@ -107,7 +112,8 @@ function Kakaotalk() {
             </div>
           </div>
           {/* +++++++++ 라인2 +++++++++ */}
-          {/* 2번 라인만 글자수 때문인지 다른 줄이랑 잘 안 맞는다. */}
+          {/* 2번 라인만 글자수 때문인지 다른 줄이랑 잘 안 맞는다.
+          일단 mr 4 줘서 눈속임으로 해결. */}
           <div
             id="kt__top4_menu_line"
             className="flex justify-evenly mb-5 mr-4 "
@@ -175,17 +181,137 @@ function Kakaotalk() {
         </div>
         {/* -----------kt__top4_menu----------- */}
         <hr></hr>
-        <div id="kt__top5_makeBtn" className="flex justify-center text-xl">
-          <div className="border-4 border-blue-800 px-6 ">
-            <span className="font-bold">메일 </span>
+        <div id="kt__top5_makeBtn" className="flex justify-center text-xl my-5">
+          <div className="px-6 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+              />
+            </svg>
+
+            <span className="font-bold px-2">메일 </span>
             <span className="text-gray-400">만들기</span>
           </div>
-          <div className="border-4 border-red-800 px-10">
-            <span className="font-bold">캘린더</span>{" "}
+          <div className="px-10 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+              />
+            </svg>
+            <span className="font-bold px-2">캘린더</span>{" "}
             <span className="text-gray-400">일정 만들기</span>
           </div>
         </div>
         {/* -----------kt__top5_만들기----------- */}
+        <hr></hr>
+        <div id="kt__top6_AD" className="flex justify-center my-5">
+          <div className="w-5/6 relative ">
+            <img
+              src="http://yepan.net/data/file/comm_info/thumb/720x0_90/2040861234_OYWArgX9_sp_960.jpg"
+              alt="AD이미지"
+              width="100%"
+              // className="relative"
+            ></img>
+            <div className="text-white font-bold bg-gray-800/30 px-3 rounded-xl absolute top-2 right-1">
+              AD
+            </div>
+            <div className=" text-white text-3xl absolute bottom-5 left-4">
+              Nintendo Swicth - Splatoon 3
+            </div>
+            <div className="border-1 border-white text-white font-bold bg-gray-800/50 px-1 rounded absolute bottom-7 right-4">
+              알아보기
+            </div>
+          </div>
+        </div>
+        {/* -----------kt__top6_AD----------- */}
+
+        <div
+          id="kt__bottom"
+          className="flex justify-between bg-gray-200 dark:bg-gray-600"
+        >
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </span>
+        </div>
       </div>
       {/*==============kt__main================*/}
     </>
@@ -195,3 +321,4 @@ function Kakaotalk() {
 export default Kakaotalk;
 
 //flex-col을 줄 때는 flex와 같이 줘야 한다.
+//flex와 relative는 같이 쓸 수 없다. 아마/

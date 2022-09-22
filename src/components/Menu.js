@@ -5,6 +5,7 @@ import Youtube from "./Youtube";
 import TailWind from "./TailWind";
 import Kakaotalk from "./Kakaotalk";
 import ClickCounter from "./ClickCounter";
+import React, { useState } from "react";
 
 //latest가 왠지 안된다.
 function Home() {
@@ -49,6 +50,19 @@ function About() {
 }
 
 function Menu(props) {
+  const [darkmode, setDarkmode] = useState(false);
+
+  function toggle() {
+    setDarkmode(!darkmode);
+    if (!darkmode) {
+      console.log("on");
+      document.querySelector("body").classList.add("dark");
+    } else {
+      console.log("off");
+      document.querySelector("body").classList.remove("dark");
+    }
+  }
+
   return (
     <BrowserRouter>
       <nav>
@@ -99,6 +113,17 @@ function Menu(props) {
           </li>
           <li>
             <Link to="/Kakaotalk">카카오톡</Link>
+          </li>
+          <li>
+            <div className="text-white">
+              <input
+                id="toggle_dark"
+                type="checkbox"
+                checked={darkmode}
+                onChange={toggle}
+              ></input>
+              <label htmlFor="toggle_dark">다크모드</label>
+            </div>
           </li>
         </ul>
       </nav>
