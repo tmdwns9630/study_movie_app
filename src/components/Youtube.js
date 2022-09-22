@@ -50,7 +50,7 @@ function Youtube(props) {
             width="35px"
             height="30px"
           ></img>
-          Premium
+          YouTubeCopy
         </div>
         <div className="yt__top2_right">
           <span className="yt__top2_right_type">
